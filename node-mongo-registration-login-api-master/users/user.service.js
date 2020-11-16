@@ -15,6 +15,7 @@ module.exports = {
 
 async function authenticate({ username, password }) {
     const user = await User.findOne({ username });
+    console.log("Adentro");
     if (user && bcrypt.compareSync(password, user.hash)) {
         const token = jwt.sign({ sub: user.id }, config.secret, { expiresIn: '7d' });
         return {
@@ -50,7 +51,6 @@ async function create(userParam) {
 }
 
 async function update(id, userParam) {
-
     const user = await User.findById(id);
 
     // validate
