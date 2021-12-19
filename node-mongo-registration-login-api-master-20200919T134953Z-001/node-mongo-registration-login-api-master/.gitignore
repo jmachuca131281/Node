@@ -30,6 +30,7 @@ build/Release
 node_modules
 jspm_packages
 typings
+.zip
 
 # Optional npm cache directory
 .npm

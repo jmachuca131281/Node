@@ -1,7 +1,6 @@
 const test = require('./test');
 const os = require('os');
 const EventEmiter = require('events');
-
 const emitter = new EventEmiter();
 
 console.log(test.sumar());

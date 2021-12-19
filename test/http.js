@@ -27,5 +27,6 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write('<h1>Hola desde el servidor node');
     res.write('<p>Esto me esta gustando</p>');
+    res.statusCode(400).send('Bad Request')
     res.end();
 }).listen(3030);
